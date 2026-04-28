@@ -3,9 +3,9 @@ package com.ayush.oops;
 
 
 class test {
-    static String name;
-    public test(String name) {
-        test.name = name;
+    String name;
+    test(String name) {
+        this.name = name;
     }
 }
 
