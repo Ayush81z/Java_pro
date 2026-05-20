@@ -8,10 +8,7 @@ class LRUcache_lc146 {
         ListNode next;
         ListNode prev;
         int key;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
         ListNode(int key , int val) { this.key = key; this.val = val; }
-        ListNode(int val,ListNode prev , ListNode next) { this.val = val; this.prev = prev; this.next = next;  }
     }
 
     public final int capacity;
@@ -23,7 +20,7 @@ class LRUcache_lc146 {
         this.capacity = capacity;
         head =  new ListNode(0,0);
         tail = new ListNode(0,0);
-        head.next = tail;
+        head.next = tail;  //need to be mentioned for the logic to start working
         tail.prev = head;
     }
 
@@ -39,13 +36,13 @@ class LRUcache_lc146 {
 
     public void put(int key, int value) {
         if (cache.containsKey(key)) {
-            ListNode node = cache.get(key);
-            node.val = value;
+            ListNode node = cache.get(key); //get the current key's pair on the node
+            node.val = value; //now update the value
             delete(node);
             insertAttop(node);
         } else {
-            ListNode node = new ListNode(key,value);
-            cache.put(key,node);
+            ListNode node = new ListNode(key,value); //insert  a new value into the node
+            cache.put(key,node); //to main synchronous between the DLL and Maps
             insertAttop(node);
 
             if (cache.size() > capacity) {
@@ -56,15 +53,15 @@ class LRUcache_lc146 {
     }
 
     public void delete (ListNode node) {
-        node.prev.next = node.next;
+        node.prev.next = node.next; //normal mapping the prev and next
         node.next.prev = node.prev;
     }
 
     public void insertAttop(ListNode node) {
-        node.next = head.next;
+        node.next = head.next; //place just after the head by camouflage between the nodes
         node.prev = head;
 
-        head.next.prev = node;
+        node.next.prev = node; //mapping from the next element
         head.next = node;
     }
 
