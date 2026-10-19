@@ -1,10 +1,10 @@
 package com.ayush.leetcode;
 
 
-    class ListNode {
+    class Node {
       int val;
       Node next;
-      ListNode(int x) {
+      Node(int x) {
           val = x;
           next = null;
       }

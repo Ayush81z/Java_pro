@@ -1,13 +1,12 @@
-package com.ayush.leetcode;
-
+package com.ayush.linkedlist;
 
 public class leetcode_876 {
-    public Node middleNode(Node head) {
+    public ListNode middleNode(ListNode head) {
         if ( head == null) {
             return head;
         }
-        Node slow = head;
-        Node fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
 
         while ( fast != null && fast.next != null && fast.next.next != null ) {
             slow = slow.next;
@@ -17,18 +16,16 @@ public class leetcode_876 {
             return slow;
         }
         return slow.next;
-
-
     }
 }
 
 
-//   class ListNode {
-//      int val;
-//      ListNode next;
-//      ListNode() {}
-//      ListNode(int val) { this.val = val; }
-//      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-//  }
+   class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
 
 
