@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.linkedlist;
 
 public class leetcode_21 {
     class ListNode {

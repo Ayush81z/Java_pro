@@ -1,6 +1,13 @@
 package com.ayush.linkedlist;
 
 public class leetcode_876 {
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+    }
+
     public ListNode middleNode(ListNode head) {
         if ( head == null) {
             return head;
@@ -20,12 +27,6 @@ public class leetcode_876 {
 }
 
 
-   class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
+
 
 
