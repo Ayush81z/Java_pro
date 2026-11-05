@@ -29,15 +29,17 @@ public class LinkedListCycle_lc142 {
 
     //optimal
     public static ListNode detectCycle(ListNode head) {
-        if (head == null) {
-            return null;
-        }
+        if (head == null) return null;
+
         ListNode slow = head;
         ListNode fast = head;
 
-        while (fast != null && fast.next != null) {
+        //to find the cycle
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
+
+            //to  find the beginning of the cycle
             if (slow == fast) {
                 slow = head;
                 while (slow != fast) {
