@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 class leetcode852 {
     public int peakIndexInMountainArray(int[] arr) {

@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 public class RotatedSortedArray2_lc81 {
     public static void main(String[] args) {

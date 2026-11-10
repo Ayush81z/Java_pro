@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 public class leetcode34 {
 

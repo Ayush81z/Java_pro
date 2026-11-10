@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 public class kthmissingpositive_lc1539 {
     public static void main(String[] args) {

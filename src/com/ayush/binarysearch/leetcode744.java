@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 class Solution {
     public char nextGreatestLetter(char[] letters, char target) {

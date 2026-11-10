@@ -1,4 +1,4 @@
-package com.ayush.leetcode;
+package com.ayush.binarysearch;
 
 public class FindMinimumRotatedsorted_lc153 {
     public static void main(String[] args) {
